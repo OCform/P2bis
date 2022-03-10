@@ -1,0 +1,17 @@
+Avant CSS3, ce modèle de boîte était connu sous le nom de modèle de boîte W3C, dans CSS3, il est connu sous le nom de boîte de contenu.
+
+ La largeur totale d'une boîte est donc marge gauche + bordure gauche + remplissage gauche + largeur + remplissage droite + bordure droite + marge droite.  De même, la hauteur totale d'une boîte est égale à la marge supérieure + la bordure supérieure + le rembourrage supérieur + la hauteur + le rembourrage inférieur + la bordure inférieure + la marge inférieure.
+
+ Par exemple, le code CSS suivant
+
+ .Ma classe {
+   largeur : 200 pixels ;
+   hauteur : 100px ;
+   rembourrage : 10px ;
+   bordure : noir uni de 10 pixels ;
+   marge : 10px ;
+ }
+
+ spécifierait les dimensions de la boîte de chaque bloc appartenant à 'myClass'.  De plus, chacune de ces boîtes aura une hauteur totale de 160px et une largeur de 260px.
+
+ CSS3 a introduit le modèle de boîte d'Internet Explorer dans la norme, connue sous le nom de border-box.[6]

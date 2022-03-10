@@ -1,0 +1,17 @@
+Before CSS3, this box model was known as W3C box model, in CSS3, it is known as the content-box.
+
+The total width of a box is therefore left-margin + left-border + left-padding + width + right-padding + right-border + right-margin. Similarly, the total height of a box equals top-margin + top-border + top-padding + height + bottom-padding + bottom-border + bottom-margin.
+
+For example, the following CSS code
+
+.myClass {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: solid 10px black;
+  margin: 10px;
+}
+
+would specify the box dimensions of each block belonging to 'myClass'. Moreover, each such box will have total height 160px and width 260px.
+
+CSS3 introduced the Internet Explorer box model to the standard, known referred to as border-box.[6]
