@@ -1,11 +1,30 @@
-.pop-img {
-    width: auto;
-}
+/*
+    La propriété box-sizing peut être définie avec l'un des mots-clés suivants.
+        
+        content-box
 
-* {
-    /*box-sizing: border-box;
-    box-sizing: content-box;*/
-  }
+        C'est la valeur initiale et la valeur par défaut, spécifiée dans le standard CSS. 
+        Les propriétés width et height sont mesurées en incluant le contenu, 
+        mais pas le remplissage, la bordure, la marge extérieure ou intérieure. 
+        Les dimensions de l'élément sont donc calculées à partir de la hauteur 
+        et de la largeur du contenu (on ne tient pas compte de la bordure ou du remplissage (padding)). 
+        Ainsi, .box {width: 350px; border:10px solid black;} fournira une boîte dont la largeur vaut  370px.
+
+        border-box
+
+        Les propriétés width et height incluent le contenu, le remplissage (padding), la bordure, mais pas la marge. 
+        C'est le modèle de boîte utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). 
+        La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, 
+        il est donc impossible d'utiliser border-box pour faire disparaître l'élément. 
+        Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (padding) et du contenu.    
+        Ici, les dimensions de l'élément sont calculées comme suit : 
+        largeur = bordure + marge interne + largeur du contenu, et hauteur = bordure + marge interne + hauteur du contenu.
+*/
+*, *:before, *:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 body {
 }
