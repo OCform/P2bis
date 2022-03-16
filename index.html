@@ -14,6 +14,72 @@
         <title>Booki</title>
       </head>
 <body>
+
+    <header>
+
+        <div class="logoBooki">
+            <a href="./index.html">
+                <picture>
+                    <source media="(min-width:992px)" srcset="./images/logo/Booki@3x.png">
+                    <!--source media="(min-width:768px)" srcset="images/logo/Booki.png"-->
+                    <img src="./images/logo/Booki.png" alt="Logo Booki" style="width:auto;">
+                </picture>
+            </a>
+        </div>
+
+        <nav class="navigation main">
+            <ul>
+                <li class="lodgings"><a href="#lodgings">Hébergements</a></li>
+                <li class="activities"><a href="#activities"><span>Activités</span></a></li>
+            </ul>
+        </nav>    
+
+        <section id="search">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+
+            <form action="#" method="get" id="search location">
+                    
+                    <input type="search" list="lieux" autocomplete="off" id="search input" name="search input" aria-label="Indiquez la localité de recherche d'hébergements et/ou activités" placeholder="Ville, Pays">
+                    <datalist id="location">
+                        <option value="Marseille, France">Marseille, France</option>
+                    </datalist>
+                    <button id="search input btn" type="submit"><span>Rechercher</span></button>
+
+            </form>
+
+            <div id="filters">
+
+                <span>Filtres</span>
+
+                <a href="#">
+                    <i class="fas fa-money-bill-wave"></i>                    
+                    <span>Économique</span>
+                </a>
+
+                <a href="#">
+                    <i class="fas fa-child"></i>
+                    <span>Familial</span>
+                </a>
+
+                <a href="#">
+                    <i class="fas fa-heart"></i>
+                    <span>Romantique</span>
+                </a>
+
+                <a href="#">
+                    <i class="fas fa-dog"></i>
+                    <span>Animaux autorisés</span>
+                </a>
+                    
+            </div>
+
+            <p id="info"><i class="fas fa-info-circle"></i><span>Plus de 500 logements sont disponibles dans cette ville</span></p>
+
+        </section>
+    </header>
+
+<!--
     <div class="header-wrapper">
         <header class="header" role="banner">
             <a aria-label="Booki" href="#" class="header-img">                
@@ -53,14 +119,7 @@
             <h2>Les plus populaires </h2>
             <article>
                 <a aria-label="Hébergements les plus populaires" href="#" class="pop-img">     
-                    <!--img src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                         srcset="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg 200w,
-                                 ./images/hebergements/3_meduim/annie-spratt-Eg1qcIitAuA-unsplash.jpg 400w,
-                                 ./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg 600w,
-                                 ./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg 800w"
-                          sizes="(min-width: 200px) 40vw, 80vw, 120vw, 160vw"
-                          alt=""
-                    -->           
+                       
                     <picture>
                         <source media="(min-width:992px)" srcset="./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
                         <source media="(min-width:816px)" srcset="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
@@ -68,12 +127,7 @@
                         <source media="(min-width:768px)" srcset="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg">                       
                         <img role="img" src="./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="annie-spratt-Eg1qcIitAuA-unsplash.jpg" style="width:auto;">
                     </picture> 
-                    <!--img srcset=    "./images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg 400w,
-                                     ./images/hebergements/3_meduim/annie-spratt-Eg1qcIitAuA-unsplash.jpg 600w,
-                                     ./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg 800w"                    
-                    sizes="(max-width: 768px) 380px, (max-width: 992px) 540px,700px"
-                    src="./images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                    alt="annie-spratt-Eg1qcIitAuA-unsplash" role="img"/-->
+                    
 
 
                 </a>
@@ -149,6 +203,6 @@
         </nav>        
     </footer>
 
-    
+-->    
 </body>
 </html>
