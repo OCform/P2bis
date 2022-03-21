@@ -27,6 +27,36 @@
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;    
+}
+
+a {
+    text-decoration:none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    /*height: 80px;*/
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 10px 0 20px;
+}
+
+/*********
+**********
+body {
     font-family: 'Raleway', sans-serif;    
 }
 
@@ -53,7 +83,7 @@ p {
 }
 
 
-/* header styles */
+/* header styles *//*
 .header-wrapper {
     
 }
@@ -115,7 +145,7 @@ p {
     
 }
 
-/* main styles */
+/* main styles *//*
 .content {
     
 }
@@ -133,7 +163,7 @@ p {
     
 }
 
-/* footer styles */
+/* footer styles *//*
 .footer {
     
 }
@@ -162,4 +192,4 @@ p {
 .footer-navigation-link:focus {
     text-decoration: underline;
 }
-
+*******************x*************************/
