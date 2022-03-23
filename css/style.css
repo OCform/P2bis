@@ -1,3 +1,23 @@
+/* ---------------- Global Classes ---------------*/
+/* -------x------- Global Classes --------x-------*/
+
+/*-----------------heater-------------------------*/
+/* ------------------- navbar ------------------- */
+/*---------x---------- navbar -----------x--------*/
+/*---------x-------heater----------------x--------*/
+
+/* ----------------- Main Content----------- */
+/* --------------- Site title ---------------- */
+/* --------x------ Site title --------x------- */
+/* ---------------- Site Content ----------------*/
+/* -------x-------- Site Content --------x-------*/
+/* ----------x------- Main Content-------x---- */
+
+/* ----------------- Footer --------------------- */
+/* ---------x------- Footer ----------x---------- */
+
+
+
 /*
     La propriété box-sizing peut être définie avec l'un des mots-clés suivants.
         
@@ -20,38 +40,157 @@
         Ici, les dimensions de l'élément sont calculées comme suit : 
         largeur = bordure + marge interne + largeur du contenu, et hauteur = bordure + marge interne + hauteur du contenu.
 */
+
+/*
+    Utilisation des propriétés CSS Flexbox : 
+            justify-content
+            align-items
+            flex-direction
+            order
+            align-self
+            flex-wrap
+            flex-flow
+            align-content
+
+*/
 *, *:before, *:after{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+   
 }
 
-body {
+html {
     font-family: 'Raleway', sans-serif;
-    margin: 0;    
+    scroll-behavior:smooth;
+  }
+
+body {
+    margin: 0;
+  }
+
+header {
+    background: white;
 }
+
+
+h1 {
+    text-align:left;
+    color: #000;       
+    margin-left: 50px;
+  }
+
+  article {
+    
+  }
 
 a {
     text-decoration:none;
 }
 
-nav {
+.header_navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav img {
-    /*height: 80px;*/
+.header_navigation img {
+    margin: 0;
+    padding: 0;    
 }
 
-nav ul {
+.header_navigation ul {
     display: flex;
     list-style: none;
 }
 
-nav li {
+.header_navigation li {
     margin: 0 10px 0 20px;
+}
+
+.title {
+    display: flex;   
+    justify-content: flex-start;
+    flex-direction: column;    
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+/*h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 50px;
+}*/
+
+.title p { 
+    margin-left: 50px;    
+}
+
+#search_location {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 50px;    
+}
+
+#filters {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 50px;
+    
+    display: flex;
+    justify-content: flex-start;    
+    flex-flow: row wrap;
+
+}
+#filters span {    
+    padding-right: 10px;
+}
+
+#info {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 0px;    
+    margin-left: 50px;
+}
+
+#info i {
+    margin-right: 10px;
+    
+}
+
+#activites {
+    display: flex;   
+    flex-direction: column;
+}
+
+#activites_cards {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#hebergements {
+    
+    /*background-color: darkgrey;*/   
+}
+
+#hebergements_cards {
+    
+}
+
+.card {
+        
+}
+
+#populaires {
+    display: flex; 
+}
+
+.footer_navigation {
+    display: flex;        
 }
 
 /*********
