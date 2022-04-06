@@ -1,334 +1,585 @@
-/* ---------------- Global Classes ---------------*/
-/* -------x------- Global Classes --------x-------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-/*-----------------heater-------------------------*/
-/* ------------------- navbar ------------------- */
-/*---------x---------- navbar -----------x--------*/
-/*---------x-------heater----------------x--------*/
-
-/* ----------------- Main Content----------- */
-/* --------------- Site title ---------------- */
-/* --------x------ Site title --------x------- */
-/* ---------------- Site Content ----------------*/
-/* -------x-------- Site Content --------x-------*/
-/* ----------x------- Main Content-------x---- */
-
-/* ----------------- Footer --------------------- */
-/* ---------x------- Footer ----------x---------- */
-
-
-
-/*
-    La propriété box-sizing peut être définie avec l'un des mots-clés suivants.
-        
-        content-box
-
-        C'est la valeur initiale et la valeur par défaut, spécifiée dans le standard CSS. 
-        Les propriétés width et height sont mesurées en incluant le contenu, 
-        mais pas le remplissage, la bordure, la marge extérieure ou intérieure. 
-        Les dimensions de l'élément sont donc calculées à partir de la hauteur 
-        et de la largeur du contenu (on ne tient pas compte de la bordure ou du remplissage (padding)). 
-        Ainsi, .box {width: 350px; border:10px solid black;} fournira une boîte dont la largeur vaut  370px.
-
-        border-box
-
-        Les propriétés width et height incluent le contenu, le remplissage (padding), la bordure, mais pas la marge. 
-        C'est le modèle de boîte utilisé par Internet Explorer lorsque le document est en mode de compatibilité (Quirks). 
-        La boîte de contenu ne peut pas être négative et est ramenée à 0 si nécessaire, 
-        il est donc impossible d'utiliser border-box pour faire disparaître l'élément. 
-        Les dimensions de l'élément sont calculées comme la somme de la bordure, du remplissage (padding) et du contenu.    
-        Ici, les dimensions de l'élément sont calculées comme suit : 
-        largeur = bordure + marge interne + largeur du contenu, et hauteur = bordure + marge interne + hauteur du contenu.
-*/
-
-/*
-    Utilisation des propriétés CSS Flexbox : 
-            justify-content
-            align-items
-            flex-direction
-            order
-            align-self
-            flex-wrap
-            flex-flow
-            align-content
-
-*/
-*, *:before, *:after{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-   
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;   
 }
 
-html {
-    font-family: 'Raleway', sans-serif;
-    scroll-behavior:smooth;
-  }
+/* Couleurs de la charte */ 
+:root {
+  --blue: #0065FC;
+  --light-blue: #DEEBFF;
+  --grey: #F2F2F2;
+}
 
+.blue {
+  color: #0065FC;
+}
+ 
+.light-blue {
+  color: #DEEBFF
+}
+
+.grey {
+  color: #F2F2F2; 
+}
+/*xxxx Couleurs de la charte xxxx*/
+
+/* structure globale */
 body {
-    margin: 0;
-  }
-
-header {
-    background: white;
-}
-
-
-h1 {
-    text-align:left;
-    color: #000;       
-    margin-left: 50px;
-  }
-
-  article {
-    
-  }
-
-a {
-    text-decoration:none;
-}
-
-.header_navigation {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif; 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-.header_navigation img {
-    margin: 0;
-    padding: 0;    
+main, header{
+    width:90%;
 }
 
-.header_navigation ul {
+main {
+    flex: 1;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    background-color: var(--grey);
+    height: auto;
+    padding: 3%;
+}
+
+ul {
     list-style: none;
 }
 
-.header_navigation li {
-    margin: 0 10px 0 20px;
+a {
+    text-decoration: none;
+    color: #000;
 }
+/*xxxx structure globale xxxx*/
 
-.title {
-    display: flex;   
-    justify-content: flex-start;
-    flex-direction: column;    
-    align-items: flex-start;
-    margin-bottom: 50px;
-}
 
-/*h1 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 50px;
-}*/
+/* header */
 
-.title p { 
-    margin-left: 50px;    
-}
-
-#search_location {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right: 0;
-    margin-left: 50px;    
-}
-
-#filters {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 50px;
-    
-    display: flex;
-    justify-content: flex-start;    
-    flex-flow: row wrap;
-
-}
-#filters span {    
-    padding-right: 10px;
-}
-
-#info {
-    margin-top: 20px;
-    margin-right: 0px;
-    margin-bottom: 0px;    
-    margin-left: 50px;
-}
-
-#info i {
-    margin-right: 10px;
-    
-}
-
-#activites {
-    display: flex;   
-    flex-direction: column;
-}
-
-#activites_cards {
+/* menu */
+.header-navigation {
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;    
 }
 
-#hebergements {
-    
-    /*background-color: darkgrey;*/   
+.booki img {
+    margin-top: 40px;
+    width: 30%;
 }
 
-#hebergements_cards {
-    
-}
-
-.card {
-        
-}
-
-#populaires {
-    display: flex; 
-}
-
-.footer_navigation {
+section.links {
+    /*width: 30%;*/
     display: flex;        
+    /*justify-content: space-evenly;*/
+    gap: 20px;
 }
 
-/*********
-**********
-body {
-    font-family: 'Raleway', sans-serif;    
+.links a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;   
 }
 
-h1 {
-   
+.link-hebergement {
+    width: 150px;
 }
 
-h2 {
-    
+.link-activite {
+    width: 90px;
 }
 
-h3 {
-    
+.link-hebergement, .link-activite {
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    font-weight: 600;
 }
 
-.bold {font-weight: bold !important;}
-
-p {
-   
+.link-hebergement:hover, .link-activite:hover {
+    color: var(--blue);
 }
 
-.sr-only {
-   
+.link-hebergement:hover::before, .link-activite:hover::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: var(--blue);
+    width: 110%;
+    left: -5px
 }
 
-
-/* header styles *//*
-.header-wrapper {
-    
+header h1, header p {
+    /*line-height: 10px;*/
 }
 
-.header {
-    
+header h1 {
+    margin-top: 20px;
+    font-size: 20px;
 }
 
-.header-img {
-    
+header p {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14.5px;
 }
+/*xxxx menu xxxx*/
 
-.header-img:hover {
-    
-}
-
-.header-img:hover path {
-    
-}
-
-.header-navigation {
-    
-}
-
-.header-navigation ul {
-    
-}
-
-.header-navigation-item {
-  
-}
-
-.header-navigation-item a {
-   
-}
-
-.header-navigation-item:hover,
-.header-navigation-item:focus {
-   
-}
-
-.header-search {
+/* formulaire */
+form {
+    height: 50px;
     display: flex;
-    flex-wrap: wrap;
-    background-color: DodgerBlue;   
 }
 
-.search-icon {
-    
-}
-
-.header-search input[type='search'] {
+.search {
+    width: 50px;
+    height: 50px;
+    background-color: var(--grey);
+    border-radius: 16px 0 0 16px;  
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+} 
+
+.local {
+    line-height: 50px;
+    font-size: 20px;  
+}
+input#search {
+    height: 100%;
+    width: 238px;
+    padding-left: 5px;
+    border-top: 2px solid var(--grey);
+    border-bottom: 2px solid var(--grey);
+    border-left: transparent;
+    border-right: transparent;
+    text-align: left;
+    font-size: 18px;
 }
 
-.header-search input[type='search']:focus,
-.header-search input[type='search']:hover {
-    
+#search::placeholder {
+    color: black;
+    font-weight:900;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Raleway', sans-serif;  
 }
 
-/* main styles *//*
-.content {
-    
+#search:focus {
+    outline: none;
+    border: 1px solid var(--blue);
 }
-
-.content section {
-   
+.searchs{
+    height: 100%;
+    width: 116px;
+    font-size: 16px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 0 16px 16px 0;
+    cursor: pointer;   
+    border: none;
 }
-
-.content-link {
-    
+.fa-search{
+    font-size: 18px;
+    opacity: 0;
 }
+/*xxxx formulaire xxxx*/
 
-.content-link:hover,
-.content-link:focus {
-    
-}
-
-/* footer styles *//*
-.footer {
-    
-}
-
-.footer-navigation {
-    
-}
-
-.footer-navigation ul {
-    line-height: 25px;
-    margin-right: 80px;
-    padding-left: 0;
-}
-
-.footer-title {
-    color: #000;
+/* filtres */
+.filters {
+    display: flex;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.footer-navigation-link {
-    color: #000;
-    text-decoration: none;
+.filter-search {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
 }
 
-.footer-navigation-link:hover,
-.footer-navigation-link:focus {
-    text-decoration: underline;
+.filter-title {
+    width: auto;
+    margin: auto;
+    /*padding-left: 5px;*/
+    font-weight: bold;
+    line-height: 60px;
 }
-*******************x*************************/
+
+.button {
+    margin-left: 30px;
+    display: block;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    font-size: 18px;
+    border: 3px solid var(--grey);
+    border-left: transparent;
+    border-radius: 32px;
+    height: 40px;
+}
+
+.button:hover {
+    /*transform: scale(1.1);*/
+    /*transform: scale(0.5) translate(-100%, -100%);*/
+    transform: rotate(0.98turn);
+}
+
+.rounded {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+}
+
+.button-money {
+    /*width: 192px;*/       
+}
+
+.button-child {
+    /*width: 153px;*/
+}
+
+.button-heart{
+    /*width: 186px;*/
+}
+
+.button-dog{
+    /*width: 225px;*/    
+}
+
+.filter {
+    width: auto;
+    margin: 15px;
+    /*padding-left: 5px;*/
+    font-weight: bold;
+}
+/*xxxx filtres xxxx*/
+
+/* information */
+.info {
+    border: 1px solid var(--grey);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 15px;
+}
+/*xxxx information xxxx*/
+
+/*xxxx header xxxx*/
+
+
+/* main */
+
+
+.container{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;   
+}
+
+/* section hebergements */
+#section-hebergements {
+    width: 61%;
+    background-color: var(--grey);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 25px;  
+    padding: 20px; 
+}
+h2.hebergement{
+    width: 90%;
+    margin-left: 30px;
+    font-size: 1.5vw;
+}
+
+.section-hebergements-card{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    box-shadow: -3px 0px 17px 0px #d9d9d9;
+    border-radius: 16px;  
+    overflow: hidden;
+    width: 28%;
+    height: 33%;  
+    position: relative; 
+}
+.section-hebergements-card:hover{
+    transform: scale(1.02);
+}
+.under-card-1{
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border: 6px solid transparent;
+    border-radius: 0 0 16px 16px;
+    position: absolute;
+    bottom: -1px;
+    right: 0px;  
+}
+
+.under-card-1 p{
+    padding-left: 5%;
+    padding-top: 4%;  
+    line-height: 60%; 
+    font-size: 1vw;
+}
+.under-card-1 p:first-of-type{
+    font-weight: bold;
+}
+
+.card-1, .card-2, .card-3, .card-4, .card-5, .card-6{
+    border-radius: 16px; 
+    object-fit: cover;  
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border: 6px solid white;
+}
+.card-1{
+    object-position: 0 0px;
+}
+.card-2{
+    object-position: 0 -4vh;
+}
+.card-3{
+    object-position: 0 -4vh;
+}
+.card-4{
+    object-position: 0 -5vh;
+}
+.card-5{
+    object-position: 0 0px;
+}
+.card-6{
+    object-position: 0 -13vh;
+}
+p.stars{
+    position: absolute;
+    bottom: 3px;
+}
+.affichez{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 30px;
+    
+}
+
+/* galerie de la section 2*/
+
+.section-populaires{
+    width: 31%;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.populaires {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;  
+    margin-bottom: 1.8vh;  
+}
+
+.populaires h2 {
+    font-size: 1.5vw;
+}
+.fa-chart-line{
+    font-size: 2vw;   
+}
+
+.section-populaires-card{
+    text-decoration: none;
+    color: black;
+    box-shadow: -3px 0px 17px 0px var(--grey);
+    border-radius: 16px;  
+    width: 83%;
+    height: 9vmax;
+    display: flex; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.section-populaires-card:hover{
+    transform: scale(1.02);
+}
+.populaires-card{
+    width: 40%;
+    height: 100%;
+    border-radius: 16px 0px 0px 16px;
+    object-fit: cover;
+    border: 6px solid white;
+}
+img.febrian-card{
+    object-position: 0 -20px;  
+}
+
+.under-card-2{
+    width: 60%;
+    background: white;
+    border-radius: 0 16px 16px 0;
+    border-left: 4px solid white;
+    font-size: 1vw;
+    padding-top: 5px;
+    line-height: 1.8vw;
+    position: relative;
+    
+}
+.under-card-2 p:first-of-type{
+    font-weight: 900;
+}
+.under-card-22 :nth-of-type(2){
+    font-weight: 900;     
+}
+
+/* section activités */
+.activites{
+    width: 100%;
+    height: 40vw;
+    margin-bottom: 20px;
+}
+.titre1{
+    width: 90%;
+    font-size: 1.6vw;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    
+}
+#section-activites {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+/*gauche et droite*/
+.section-activites-left-1, .section-activites-right-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+      
+}
+.section-activites-left-2, .section-activites-right-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+.section-activites-right-2 {
+    align-items: flex-end;
+}
+#section-activites a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+#section-activites a:hover{
+    transform: scale(1.02);
+}
+
+.port{
+    width: 45%;
+    height: 100%;  
+}
+
+.pomegues{
+    width: 92%;
+    height: 60%;
+    
+    
+}
+.frioul{
+    width: 92%;
+    height: 35%;
+}
+.calanques{
+    width: 45%;
+    height: 100%;
+}
+.garde{
+    width: 100%;
+    height: 45%;
+}
+.longchamp{
+    width: 100%;  
+    height: 50%;  
+}
+#section-activites img{
+    border-radius: 16px;
+    box-shadow: -3px 0px 17px 0px rgba(242,242,242,1);
+    margin-bottom: 20px;
+    display: inline-block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.under-card-3{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 1vw;
+    font-size: 0.9vw;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -1px;       
+}
+
+
+
+
+
+/*///////////////////////////////////
+              FOOTER
+////////////////////////////////////*/
+footer a {
+    display: block;    
+}
+.a-propos, .nos-hebergements, .assistance{
+    flex-basis: 30%;
+    
+}
